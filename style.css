@@ -1,94 +1,91 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
   background: #000;
-  color: white;
+  color: #fff;
 }
 
-/* NAVBAR */
-.navbar {
-  height: 72px;
-  width: 100%;
-  background: rgba(0,0,0,0.9);
+/* HEADER */
+.main-header {
+  height: 80px;
+  padding: 0 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
+  background: linear-gradient(180deg, #050505, #000);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 /* LEFT */
-.nav-left {
+.left {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
 }
 
 .logo {
   height: 42px;
-  filter: drop-shadow(0 0 6px rgba(255,120,0,0.6));
 }
 
-.brand {
+.site-name {
+  font-size: 18px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  gap: 40px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #ddd;
+  letter-spacing: 2px;
   font-size: 14px;
-  letter-spacing: 2px;
-  font-weight: bold;
-}
-
-/* CENTER MENU */
-.nav-center a {
-  margin: 0 18px;
-  color: white;
-  text-decoration: none;
-  letter-spacing: 2px;
-  font-size: 13px;
-  opacity: 0.8;
   position: relative;
+  transition: 0.3s;
 }
 
-/* BRACKET HOVER EFFECT */
-.nav-center a::before {
-  content: "(";
+.nav a span {
   opacity: 0;
-  margin-right: 3px;
+  margin-left: 4px;
+  transition: 0.3s;
 }
 
-.nav-center a::after {
-  content: ")";
-  opacity: 0;
-  margin-left: 3px;
+.nav a:hover {
+  color: #ff9a00;
 }
 
-.nav-center a:hover::before,
-.nav-center a:hover::after {
+.nav a:hover span {
   opacity: 1;
 }
 
-.nav-center a:hover {
-  opacity: 1;
+/* AUTH */
+.auth {
+  display: flex;
+  gap: 15px;
 }
 
-/* RIGHT */
-.nav-right a {
-  margin-left: 18px;
+.auth a {
   text-decoration: none;
-  letter-spacing: 2px;
-  font-size: 12px;
+  color: #fff;
+  font-size: 13px;
+  padding: 8px 18px;
+  border: 1px solid rgba(255,255,255,0.3);
+  transition: 0.3s;
 }
 
-.login {
-  color: white;
-  opacity: 0.8;
+.auth .signup {
+  background: rgba(255,255,255,0.08);
 }
 
-.signup {
-  border: 1px solid rgba(255,255,255,0.4);
-  padding: 6px 14px;
-  color: white;
+.auth a:hover {
+  box-shadow: 0 0 20px rgba(255,150,0,0.6);
 }
-
